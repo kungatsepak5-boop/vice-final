@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virat Kohli - The People's Captain</title>
+    <meta name="description" content="Official Campaign Website for Virat Kohli. Leadership, Excellence, Vision.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter for that clean Apple look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP for high-end smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'campaign-dark': '#0a210f',    /* Deep Forest Green */
+                        'campaign-green': '#14532d',   /* Standard Green */
+                        'campaign-lime': '#ccff00',    /* Electric Lime (Poster match) */
+                        'campaign-light': '#f0fdf4',   /* Mint White */
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(204, 255, 0, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f0fdf4;
+            overflow-x: hidden;
+        }
+
+        /* Smooth scrolling text marquee */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a210f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ccff00;
+            border-radius: 4px;
+        }
+
+        /* Text Stroke Effect */
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            color: transparent;
+        }
+        
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Sticky Tape Effect */
+        .tape-strip {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transform: rotate(-2deg);
+        }
+    </style>
+</head>
+<body class="text-campaign-dark antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card rounded-full px-6 py-3 shadow-lg">
+            <a href="#" class="text-xl font-black tracking-tighter flex items-center gap-2">
+                <div class="w-8 h-8 bg-campaign-lime rounded-full flex items-center justify-center text-campaign-dark">VK</div>
+                KOHLI <span class="text-green-600 font-light">2025</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#vision" class="hover:text-green-600 transition-colors">VISION</a>
+                <a href="#legacy" class="hover:text-green-600 transition-colors">LEGACY</a>
+                <a href="#manifesto" class="hover:text-green-600 transition-colors">MANIFESTO</a>
+            </div>
+            <button class="bg-campaign-dark text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-green-800 transition-transform hover:scale-105">
+                JOIN US
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-campaign-dark text-white pt-20">
+        <!-- Background Abstract Elements -->
+        <div class="absolute inset-0 z-0 opacity-30">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-green-600 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-campaign-lime rounded-full blur-[100px] mix-blend-overlay"></div>
+        </div>
+
+        <!-- Main Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <div class="overflow-hidden mb-2">
+                <h2 class="hero-text text-campaign-lime font-bold tracking-widest text-sm md:text-base uppercase mb-4 translate-y-full">The Nation's Choice</h2>
+            </div>
+            <div class="overflow-hidden">
+                <h1 class="hero-title text-7xl md:text-[10rem] font-black leading-none tracking-tighter mb-2 translate-y-full mix-blend-lighten">
+                    VIRAT
+                </h1>
+            </div>
+            <div class="overflow-hidden">
+                <h1 class="hero-title text-7xl md:text-[10rem] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 translate-y-full">
+                    KOHLI
+                </h1>
+            </div>
+            
+            <!-- Dynamic Tape Banner (Inspired by Upload) -->
+            <div class="tape-strip bg-campaign-lime text-campaign-dark font-black text-xl md:text-3xl py-3 px-12 mt-12 inline-block transform -rotate-2 hover:rotate-0 transition-transform duration-300 cursor-default shadow-glow">
+                COWABUNGA! VOTE FOR EXCELLENCE
+            </div>
+        </div>
+
+        <!-- Scrolling Marquee at Bottom -->
+        <div class="absolute bottom-12 w-full bg-campaign-green/20 backdrop-blur-sm border-y border-white/10 py-4 rotate-1 scale-105 z-20">
+            <div class="marquee-container">
+                <div class="marquee-content text-4xl font-black text-white/20 uppercase tracking-widest">
+                    Discipline • Leadership • Passion • Integrity • A New Era • Vote Kohli • Discipline • Leadership • Passion • Integrity • A New Era • Vote Kohli •
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bento Grid Section: "The Apple Aesthetic" -->
+    <section id="legacy" class="py-24 px-6 bg-campaign-light relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center reveal-on-scroll">
+                <h2 class="text-4xl md:text-6xl font-black text-campaign-dark tracking-tight mb-4">UNMATCHED <span class="text-green-600">LEGACY</span></h2>
+                <p class="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">Bringing the precision of world-class sport to the governance of our nation.</p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[800px]">
+                
+                <!-- Main Feature Card (Large) -->
+                <div class="bento-card md:col-span-2 md:row-span-2 bg-white rounded-[2rem] p-8 shadow-xl border border-gray-100 flex flex-col justify-between overflow-hidden relative group hover:shadow-2xl transition-all duration-500">
+                    <div class="absolute top-0 right-0 p-8 opacity-10">
+                        <svg class="w-64 h-64" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <div class="z-10">
+                        <span class="bg-campaign-lime text-campaign-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">The Visionary</span>
+                        <h3 class="text-4xl font-bold mt-4 mb-2 text-campaign-dark">Captain of <br>The People.</h3>
+                        <p class="text-gray-500">Leading from the front with aggression and passion. Turning potential into performance.</p>
+                    </div>
+                    <div class="h-64 w-full bg-gray-200 rounded-2xl mt-6 relative overflow-hidden">
+                         <img src="https://placehold.co/800x600/14532d/FFFFFF?text=Leadership+In+Action" class="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700" alt="Leadership">
+                    </div>
+                </div>
+
+                <!-- Stat Card 1 -->
+                <div class="bento-card md:col-span-1 md:row-span-1 bg-campaign-dark text-white rounded-[2rem] p-8 shadow-xl flex flex-col justify-center items-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-800 to-campaign-dark opacity-50"></div>
+                    <h4 class="text-6xl font-black text-campaign-lime relative z-10 counter" data-target="25000">0</h4>
+                    <p class="text-sm font-bold tracking-widest uppercase mt-2 relative z-10">Runs Scored</p>
+                    <p class="text-xs text-gray-400 mt-1 relative z-10 text-center">Consistency over decades.</p>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="bento-card md:col-span-1 md:row-span-1 bg-white rounded-[2rem] p-8 shadow-xl border border-gray-100 flex flex-col justify-between group hover:bg-campaign-light transition-colors duration-300">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-campaign-dark">High Energy Policy</h3>
+                    <p class="text-sm text-gray-500 mt-2">Revitalizing infrastructure with the same energy brought to the pitch.</p>
+                </div>
+
+                <!-- Wide Card -->
+                <div class="bento-card md:col-span-2 md:row-span-1 bg-campaign-lime rounded-[2rem] p-8 shadow-xl flex items-center justify-between relative overflow-hidden group">
+                    <div class="w-2/3 pr-4 z-10">
+                        <h3 class="text-3xl font-black text-campaign-dark mb-2">Fitness First India</h3>
+                        <p class="text-campaign-dark font-medium leading-relaxed">A healthy nation is a wealthy nation. Promoting sports and health at every level.</p>
+                    </div>
+                    <div class="w-1/3 flex justify-center z-10">
+                        <div class="w-24 h-24 bg-black/10 rounded-full flex items-center justify-center backdrop-blur-md">
+                            <span class="text-4xl">💪</span>
+                        </div>
+                    </div>
+                    <!-- Decorative Circle -->
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto / Vision Section -->
+    <section id="vision" class="py-24 bg-campaign-dark text-white relative overflow-hidden">
+        <!-- Background Grid Line -->
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                
+                <div class="w-full md:w-1/2 reveal-left">
+                    <div class="relative">
+                        <!-- Green Tape Effect -->
+                        <div class="absolute -top-6 -left-10 bg-campaign-lime text-campaign-dark px-6 py-2 font-bold transform -rotate-6 shadow-lg z-20">
+                            THE MANIFESTO
+                        </div>
+                        <img src="https://placehold.co/600x800/1e1e1e/333333?text=Visionary+Portrait" alt="Virat Vision" class="rounded-[2rem] shadow-2xl border-4 border-white/10 grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 reveal-right">
+                    <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">CHASE <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-campaign-lime to-green-600">GREATNESS</span></h2>
+                    
+                    <div class="space-y-8">
+                        <div class="group cursor-pointer">
+                            <div class="flex items-center justify-between border-b border-white/20 pb-4">
+                                <h3 class="text-2xl font-bold group-hover:text-campaign-lime transition-colors">Youth Empowerment</h3>
+                                <span class="text-campaign-lime text-2xl group-hover:translate-x-2 transition-transform">→</span>
+                            </div>
+                            <p class="text-gray-400 mt-2 h-0 overflow-hidden group-hover:h-auto transition-all duration-300">Creating academies and opportunities for the next generation of leaders.</p>
+                        </div>
+                        
+                        <div class="group cursor-pointer">
+                            <div class="flex items-center justify-between border-b border-white/20 pb-4">
+                                <h3 class="text-2xl font-bold group-hover:text-campaign-lime transition-colors">National Discipline</h3>
+                                <span class="text-campaign-lime text-2xl group-hover:translate-x-2 transition-transform">→</span>
+                            </div>
+                             <p class="text-gray-400 mt-2 h-0 overflow-hidden group-hover:h-auto transition-all duration-300">Instilling the values of hard work and integrity in public service.</p>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <div class="flex items-center justify-between border-b border-white/20 pb-4">
+                                <h3 class="text-2xl font-bold group-hover:text-campaign-lime transition-colors">Global Competitiveness</h3>
+                                <span class="text-campaign-lime text-2xl group-hover:translate-x-2 transition-transform">→</span>
+                            </div>
+                             <p class="text-gray-400 mt-2 h-0 overflow-hidden group-hover:h-auto transition-all duration-300">Making India a winning nation on every global stage.</p>
+                        </div>
+                    </div>
+
+                    <button class="mt-12 bg-campaign-lime text-campaign-dark font-bold py-4 px-8 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-glow">
+                        READ FULL MANIFESTO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h4 class="text-2xl font-black tracking-tighter">VIRAT KOHLI 2025</h4>
+                <p class="text-gray-500 text-sm">Paid for by the Committee for Excellence.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-campaign-lime hover:text-black transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-campaign-lime hover:text-black transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animations Script -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Navbar Blur Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+
+        // Hero Animations
+        gsap.to(".hero-text", {
+            y: 0,
+            duration: 1,
+            ease: "power4.out",
+            delay: 0.2
+        });
+
+        gsap.to(".hero-title", {
+            y: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power4.out",
+            delay: 0.4
+        });
+
+        // Bento Grid Reveal
+        gsap.utils.toArray('.bento-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 85%",
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.out",
+                delay: i * 0.1
+            });
+        });
+
+        // Manifesto Reveals
+        gsap.from(".reveal-left", {
+            scrollTrigger: {
+                trigger: "#vision",
+                start: "top 70%",
+            },
+            x: -50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        });
+
+        gsap.from(".reveal-right", {
+            scrollTrigger: {
+                trigger: "#vision",
+                start: "top 70%",
+            },
+            x: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+            delay: 0.2
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            gsap.to(counter, {
+                scrollTrigger: {
+                    trigger: counter,
+                    start: "top 85%",
+                    once: true
+                },
+                innerHTML: target,
+                duration: 2,
+                snap: { innerHTML: 1 },
+                ease: "power1.out"
+            });
+        });
+
+    </script>
+</body>
+</html>
