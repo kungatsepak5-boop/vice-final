@@ -33,6 +33,9 @@
                     },
                     boxShadow: {
                         'glow': '0 0 20px rgba(204, 255, 0, 0.3)',
+                    },
+                    screens: {
+                        '3xl': '1920px', /* Extra large desktop handling */
                     }
                 }
             }
@@ -94,61 +97,72 @@
 <body class="text-campaign-dark antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6" id="navbar">
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6 lg:px-12" id="navbar">
         <div class="max-w-7xl mx-auto flex justify-between items-center glass-card rounded-full px-6 py-3 shadow-lg">
             <a href="#" class="text-xl font-black tracking-tighter flex items-center gap-2">
-                <div class="w-8 h-8 bg-campaign-lime rounded-full flex items-center justify-center text-campaign-dark">KT</div>
+                <div class="w-8 h-8 bg-campaign-lime rounded-full flex items-center justify-center text-campaign-dark transform hover:rotate-12 transition-transform">KT</div>
                 KUNGA <span class="text-green-600 font-light">2025</span>
             </a>
             <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
-                <a href="#vision" class="hover:text-green-600 transition-colors">VISION</a>
-                <a href="#trophy" class="hover:text-green-600 transition-colors">ACHIEVEMENTS</a>
-                <a href="#vote" class="hover:text-green-600 transition-colors">VOTE INFO</a>
+                <a href="#vision" class="hover:text-green-600 transition-colors relative group">
+                    VISION
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-campaign-lime transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#trophy" class="hover:text-green-600 transition-colors relative group">
+                    ACHIEVEMENTS
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-campaign-lime transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#vote" class="hover:text-green-600 transition-colors relative group">
+                    VOTE INFO
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-campaign-lime transition-all group-hover:w-full"></span>
+                </a>
             </div>
-            <a href="#vote" class="bg-campaign-dark text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-green-800 transition-transform hover:scale-105">
+            <a href="#vote" class="bg-campaign-dark text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-green-800 transition-all hover:scale-105 hover:shadow-glow">
                 VOTE NOW
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-campaign-dark text-white pt-20">
+    <header class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-campaign-dark text-white pt-20 lg:pt-0">
         <!-- Background Abstract Elements -->
         <div class="absolute inset-0 z-0 opacity-30">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-green-600 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-campaign-lime rounded-full blur-[100px] mix-blend-overlay"></div>
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 lg:w-[40rem] lg:h-[40rem] bg-green-600 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 lg:w-[40rem] lg:h-[40rem] bg-campaign-lime rounded-full blur-[100px] mix-blend-overlay"></div>
         </div>
 
         <!-- Main Hero Content -->
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
-            <div class="overflow-hidden mb-2">
-                <h2 class="hero-text text-campaign-lime font-bold tracking-widest text-sm md:text-base uppercase mb-4 translate-y-full">Green House Vice-Captain</h2>
+        <div class="relative z-10 text-center px-4 max-w-7xl mx-auto w-full">
+            <div class="overflow-hidden mb-4">
+                <h2 class="hero-text text-campaign-lime font-bold tracking-[0.2em] text-sm md:text-base lg:text-lg uppercase mb-4 translate-y-full">Green House Vice-Captain</h2>
             </div>
             <div class="overflow-hidden">
-                <h1 class="hero-title text-7xl md:text-[10rem] font-black leading-none tracking-tighter mb-2 translate-y-full mix-blend-lighten">
+                <h1 class="hero-title text-7xl md:text-[9rem] lg:text-[11rem] xl:text-[13rem] font-black leading-[0.85] tracking-tighter mb-2 translate-y-full mix-blend-lighten">
                     KUNGA
                 </h1>
             </div>
             <div class="overflow-hidden">
-                <h1 class="hero-title text-7xl md:text-[10rem] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 translate-y-full">
+                <h1 class="hero-title text-7xl md:text-[9rem] lg:text-[11rem] xl:text-[13rem] font-black leading-[0.85] tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 translate-y-full">
                     TSEPAK
                 </h1>
             </div>
             
             <!-- Dynamic Tape Banner (Inspired by Upload) -->
-            <div class="tape-strip bg-campaign-lime text-campaign-dark font-black text-xl md:text-3xl py-3 px-12 mt-12 inline-block transform -rotate-2 hover:rotate-0 transition-transform duration-300 cursor-default shadow-glow">
-                COWABUNGA!!! VOTE FOR KUNGA!!!
+            <div class="relative group mt-12 lg:mt-16">
+                 <div class="tape-strip bg-campaign-lime text-campaign-dark font-black text-xl md:text-3xl lg:text-4xl py-4 px-12 inline-block transform -rotate-2 group-hover:rotate-0 group-hover:scale-105 transition-all duration-300 cursor-default shadow-glow border-2 border-transparent group-hover:border-white/20">
+                    COWABUNGA!!! VOTE FOR KUNGA!!!
+                </div>
             </div>
 
-            <p class="mt-8 text-xl md:text-2xl font-light text-gray-300 tracking-wide">
+            <p class="mt-8 lg:mt-12 text-xl md:text-2xl lg:text-3xl font-light text-gray-300 tracking-wide max-w-3xl mx-auto">
                 Your Vote, Your Voice. Everything for Green House.
             </p>
         </div>
 
         <!-- Scrolling Marquee at Bottom -->
-        <div class="absolute bottom-12 w-full bg-campaign-green/20 backdrop-blur-sm border-y border-white/10 py-4 rotate-1 scale-105 z-20">
+        <div class="absolute bottom-8 lg:bottom-12 w-full bg-campaign-green/20 backdrop-blur-sm border-y border-white/10 py-4 rotate-1 scale-[1.02] z-20">
             <div class="marquee-container">
-                <div class="marquee-content text-4xl font-black text-white/20 uppercase tracking-widest">
+                <div class="marquee-content text-4xl lg:text-6xl font-black text-white/20 uppercase tracking-widest">
                     Green House • Vice-Captain • Kunga Tsepak • Cowabunga! • Nov 30th • Green House • Vice-Captain • Kunga Tsepak • Cowabunga! • Nov 30th •
                 </div>
             </div>
@@ -156,70 +170,74 @@
     </header>
 
     <!-- Bento Grid Section: "The Apple Aesthetic" -->
-    <section id="trophy" class="py-24 px-6 bg-campaign-light relative">
+    <section id="trophy" class="py-24 lg:py-32 px-6 lg:px-12 bg-campaign-light relative">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-16 text-center reveal-on-scroll">
-                <h2 class="text-4xl md:text-6xl font-black text-campaign-dark tracking-tight mb-4">A PROVEN <span class="text-green-600">WINNER</span></h2>
-                <p class="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">Delivering victories for Green House, time and time again.</p>
+            <div class="mb-16 lg:mb-24 text-center reveal-on-scroll">
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-campaign-dark tracking-tight mb-6">A PROVEN <span class="text-green-600">WINNER</span></h2>
+                <p class="text-gray-600 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed">Delivering victories for Green House, time and time again. A track record built on sweat, strategy, and spirit.</p>
             </div>
 
             <!-- Bento Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[800px]">
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 lg:gap-8 h-auto md:h-[800px] lg:h-[900px]">
                 
                 <!-- Main Feature Card (Large) -->
-                <div class="bento-card md:col-span-2 md:row-span-2 bg-white rounded-[2rem] p-8 shadow-xl border border-gray-100 flex flex-col justify-between overflow-hidden relative group hover:shadow-2xl transition-all duration-500">
-                    <div class="absolute top-0 right-0 p-8 opacity-10">
-                        <svg class="w-64 h-64" viewBox="0 0 24 24" fill="currentColor"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM7 8V7h2v3.82C7.84 10.4 7 9.3 7 8zm8 2.82V7h2v1c0 1.3-.84 2.4-2 2.82z"/></svg>
+                <div class="bento-card md:col-span-2 md:row-span-2 bg-white rounded-[2rem] p-8 lg:p-10 shadow-xl border border-gray-100 flex flex-col justify-between overflow-hidden relative group hover:shadow-2xl transition-all duration-500">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                        <svg class="w-64 h-64 lg:w-80 lg:h-80" viewBox="0 0 24 24" fill="currentColor"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM7 8V7h2v3.82C7.84 10.4 7 9.3 7 8zm8 2.82V7h2v1c0 1.3-.84 2.4-2 2.82z"/></svg>
                     </div>
                     <div class="z-10 relative">
-                        <span class="bg-campaign-lime text-campaign-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">House Champion</span>
-                        <h3 class="text-3xl font-bold mt-4 mb-2 text-campaign-dark">Legacy of Victory</h3>
+                        <span class="bg-campaign-lime text-campaign-dark text-xs lg:text-sm font-bold px-3 py-1 rounded-full uppercase tracking-wider">House Champion</span>
+                        <h3 class="text-3xl lg:text-4xl font-bold mt-4 mb-2 text-campaign-dark">Legacy of Victory</h3>
                         
                         <!-- Updated Achievements List -->
-                        <ul class="space-y-3 mt-4 text-sm md:text-base font-semibold text-gray-700 bg-white/50 backdrop-blur-sm rounded-xl p-4 border border-green-100">
-                            <li class="flex items-center"><span class="text-xl mr-3">🏆</span> Winner – Inter-House Futsal (2024)</li>
-                            <li class="flex items-center"><span class="text-xl mr-3">🏆</span> Winner – Inter-House Basketball (2025)</li>
-                            <li class="flex items-center"><span class="text-xl mr-3">🏆</span> Winner – Inter-Batch Basketball (2025)</li>
-                            <li class="flex items-center"><span class="text-xl mr-3">🥈</span> 2nd Position – Cross Country (2024)</li>
+                        <ul class="space-y-3 lg:space-y-4 mt-6 text-sm md:text-base lg:text-lg font-semibold text-gray-700 bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-green-100 hover:border-green-300 transition-colors">
+                            <li class="flex items-center"><span class="text-xl lg:text-2xl mr-3">🏆</span> Winner – Inter-House Futsal (2024)</li>
+                            <li class="flex items-center"><span class="text-xl lg:text-2xl mr-3">🏆</span> Winner – Inter-House Basketball (2025)</li>
+                            <li class="flex items-center"><span class="text-xl lg:text-2xl mr-3">🏆</span> Winner – Inter-Batch Basketball (2025)</li>
+                            <li class="flex items-center"><span class="text-xl lg:text-2xl mr-3">🥈</span> 2nd Position – Cross Country (2024)</li>
                         </ul>
                     </div>
-                    <div class="h-48 w-full bg-gray-200 rounded-2xl mt-4 relative overflow-hidden">
+                    <div class="h-48 md:h-64 lg:h-72 w-full bg-gray-200 rounded-2xl mt-6 relative overflow-hidden shadow-inner">
                          <!-- Placeholder for the trophy image from poster -->
                          <img src="https://placehold.co/800x600/14532d/FFFFFF?text=Victory+Moment" class="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700" alt="Kunga with Trophy">
                     </div>
                 </div>
 
                 <!-- Stat Card 1 -->
-                <div class="bento-card md:col-span-1 md:row-span-1 bg-campaign-dark text-white rounded-[2rem] p-8 shadow-xl flex flex-col justify-center items-center relative overflow-hidden group">
+                <div class="bento-card md:col-span-1 md:row-span-1 bg-campaign-dark text-white rounded-[2rem] p-8 lg:p-10 shadow-xl flex flex-col justify-center items-center relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
                     <div class="absolute inset-0 bg-gradient-to-br from-green-800 to-campaign-dark opacity-50"></div>
-                    <h4 class="text-6xl font-black text-campaign-lime relative z-10 counter" data-target="100">0</h4>
-                    <span class="text-4xl font-black text-campaign-lime relative z-10 -mt-2">%</span>
-                    <p class="text-sm font-bold tracking-widest uppercase mt-2 relative z-10">Commitment</p>
-                    <p class="text-xs text-gray-400 mt-1 relative z-10 text-center">To Green House Victory.</p>
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-campaign-lime rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    
+                    <h4 class="text-6xl lg:text-7xl font-black text-campaign-lime relative z-10 counter" data-target="100">0</h4>
+                    <span class="text-4xl lg:text-5xl font-black text-campaign-lime relative z-10 -mt-2">%</span>
+                    <p class="text-sm lg:text-base font-bold tracking-widest uppercase mt-4 relative z-10">Commitment</p>
+                    <p class="text-xs lg:text-sm text-gray-400 mt-1 relative z-10 text-center">To Green House Victory.</p>
                 </div>
 
                 <!-- Stat Card 2 -->
-                <div class="bento-card md:col-span-1 md:row-span-1 bg-white rounded-[2rem] p-8 shadow-xl border border-gray-100 flex flex-col justify-between group hover:bg-campaign-light transition-colors duration-300">
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+                <div class="bento-card md:col-span-1 md:row-span-1 bg-white rounded-[2rem] p-8 lg:p-10 shadow-xl border border-gray-100 flex flex-col justify-between group hover:bg-campaign-light hover:scale-[1.02] transition-all duration-300">
+                    <div class="w-12 h-12 lg:w-16 lg:h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-4 group-hover:bg-green-200 transition-colors">
+                        <svg class="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-campaign-dark">Your Voice</h3>
-                    <p class="text-sm text-gray-500 mt-2">I listen, I act, I deliver. Representing every member of our house.</p>
+                    <div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-campaign-dark">Your Voice</h3>
+                        <p class="text-sm lg:text-base text-gray-500 mt-3 leading-relaxed">I listen, I act, I deliver. Representing every member of our house with transparency.</p>
+                    </div>
                 </div>
 
                 <!-- Wide Card -->
-                <div class="bento-card md:col-span-2 md:row-span-1 bg-campaign-lime rounded-[2rem] p-8 shadow-xl flex items-center justify-between relative overflow-hidden group">
+                <div class="bento-card md:col-span-2 md:row-span-1 bg-campaign-lime rounded-[2rem] p-8 lg:p-10 shadow-xl flex items-center justify-between relative overflow-hidden group cursor-pointer">
                     <div class="w-2/3 pr-4 z-10">
-                        <h3 class="text-3xl font-black text-campaign-dark mb-2">Vote for Kunga</h3>
-                        <p class="text-campaign-dark font-medium leading-relaxed">Let's make Green House the best it's ever been. Together.</p>
+                        <h3 class="text-3xl lg:text-5xl font-black text-campaign-dark mb-3">Vote for Kunga</h3>
+                        <p class="text-campaign-dark font-medium lg:text-xl leading-relaxed">Let's make Green House the best it's ever been. Together.</p>
                     </div>
                     <div class="w-1/3 flex justify-center z-10">
-                        <div class="w-24 h-24 bg-black/10 rounded-full flex items-center justify-center backdrop-blur-md">
-                            <span class="text-4xl">🗳️</span>
+                        <div class="w-24 h-24 lg:w-32 lg:h-32 bg-black/10 rounded-full flex items-center justify-center backdrop-blur-md group-hover:bg-black/20 transition-colors">
+                            <span class="text-4xl lg:text-6xl group-hover:scale-125 transition-transform duration-300">🗳️</span>
                         </div>
                     </div>
                     <!-- Decorative Circle -->
-                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 lg:w-64 lg:h-64 bg-white/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
                 </div>
 
             </div>
@@ -227,52 +245,52 @@
     </section>
 
     <!-- Election Info / Vision Section -->
-    <section id="vote" class="py-24 bg-campaign-dark text-white relative overflow-hidden">
+    <section id="vote" class="py-24 lg:py-32 bg-campaign-dark text-white relative overflow-hidden">
         <!-- Background Grid Line -->
         <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16 lg:gap-24">
                 
                 <div class="w-full md:w-1/2 reveal-left">
-                    <div class="relative">
+                    <div class="relative group">
                         <!-- Green Tape Effect -->
-                        <div class="absolute -top-6 -left-10 bg-campaign-lime text-campaign-dark px-6 py-2 font-bold transform -rotate-6 shadow-lg z-20">
+                        <div class="absolute -top-6 -left-10 bg-campaign-lime text-campaign-dark px-6 py-2 font-bold transform -rotate-6 shadow-lg z-20 group-hover:-rotate-12 transition-transform duration-300">
                             ELECTION DAY
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md rounded-[2rem] p-8 border border-white/20 text-center">
-                            <h3 class="text-4xl font-black mb-2">SUNDAY</h3>
-                            <h2 class="text-6xl font-black text-campaign-lime mb-2">30 NOV</h2>
-                            <p class="text-2xl font-bold mb-6">02:00 PM - 05:00 PM</p>
-                            <div class="w-full h-1 bg-white/20 mb-6"></div>
-                            <p class="text-xl">Be there. Support Green House.</p>
+                        <div class="bg-white/10 backdrop-blur-md rounded-[2rem] p-8 lg:p-12 border border-white/20 text-center hover:bg-white/15 transition-colors duration-300 shadow-2xl">
+                            <h3 class="text-4xl lg:text-5xl font-black mb-2 text-gray-300">SUNDAY</h3>
+                            <h2 class="text-6xl lg:text-8xl font-black text-campaign-lime mb-4">30 NOV</h2>
+                            <p class="text-2xl lg:text-3xl font-bold mb-8 text-white">02:00 PM - 05:00 PM</p>
+                            <div class="w-full h-1 bg-white/20 mb-8"></div>
+                            <p class="text-xl lg:text-2xl font-light">Be there. Support Green House.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="w-full md:w-1/2 reveal-right">
-                    <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">EVERYTHING FOR <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-campaign-lime to-green-600">GREEN HOUSE</span></h2>
+                    <h2 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 lg:mb-12 leading-tight">EVERYTHING FOR <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-campaign-lime to-green-600">GREEN HOUSE</span></h2>
                     
-                    <div class="space-y-8">
+                    <div class="space-y-8 lg:space-y-10">
                         <div class="group cursor-pointer">
                             <div class="flex items-center justify-between border-b border-white/20 pb-4">
-                                <h3 class="text-2xl font-bold group-hover:text-campaign-lime transition-colors">Cowabunga Spirit</h3>
-                                <span class="text-campaign-lime text-2xl group-hover:translate-x-2 transition-transform">→</span>
+                                <h3 class="text-2xl lg:text-3xl font-bold group-hover:text-campaign-lime transition-colors">Cowabunga Spirit</h3>
+                                <span class="text-campaign-lime text-2xl lg:text-3xl group-hover:translate-x-2 transition-transform">→</span>
                             </div>
-                            <p class="text-gray-400 mt-2 h-0 overflow-hidden group-hover:h-auto transition-all duration-300">Bringing energy, fun, and winning vibes to every house event.</p>
+                            <p class="text-gray-400 lg:text-lg mt-2 h-0 overflow-hidden group-hover:h-auto transition-all duration-300">Bringing energy, fun, and winning vibes to every house event.</p>
                         </div>
                         
                         <div class="group cursor-pointer">
                             <div class="flex items-center justify-between border-b border-white/20 pb-4">
-                                <h3 class="text-2xl font-bold group-hover:text-campaign-lime transition-colors">Team Unity</h3>
-                                <span class="text-campaign-lime text-2xl group-hover:translate-x-2 transition-transform">→</span>
+                                <h3 class="text-2xl lg:text-3xl font-bold group-hover:text-campaign-lime transition-colors">Team Unity</h3>
+                                <span class="text-campaign-lime text-2xl lg:text-3xl group-hover:translate-x-2 transition-transform">→</span>
                             </div>
-                             <p class="text-gray-400 mt-2 h-0 overflow-hidden group-hover:h-auto transition-all duration-300">Uniting us all to lift the trophy together.</p>
+                             <p class="text-gray-400 lg:text-lg mt-2 h-0 overflow-hidden group-hover:h-auto transition-all duration-300">Uniting us all to lift the trophy together.</p>
                         </div>
                     </div>
 
-                    <div class="mt-12 p-6 bg-campaign-lime rounded-2xl text-campaign-dark shadow-glow transform rotate-1 hover:rotate-0 transition-transform duration-300">
-                        <p class="font-black text-2xl text-center">"VOTE FOR KUNGA!!!"</p>
+                    <div class="mt-12 lg:mt-16 p-6 lg:p-8 bg-campaign-lime rounded-2xl text-campaign-dark shadow-glow transform rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <p class="font-black text-2xl lg:text-4xl text-center">"VOTE FOR KUNGA!!!"</p>
                     </div>
                 </div>
             </div>
@@ -281,12 +299,14 @@
 
     <!-- Footer -->
     <footer class="bg-black text-white py-12 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0 text-center md:text-left">
                 <h4 class="text-2xl font-black tracking-tighter">KUNGA TSEPAK 2025</h4>
-                <p class="text-gray-500 text-sm">Vice-Captain Candidate | Green House</p>
+                <p class="text-gray-500 text-sm mt-1">Vice-Captain Candidate | Green House</p>
             </div>
             <div class="flex space-x-6 text-sm text-gray-500">
+                <a href="#" class="hover:text-campaign-lime transition-colors">Instagram</a>
+                <a href="#" class="hover:text-campaign-lime transition-colors">Twitter</a>
                 <span>© 2025 Campaign Team</span>
             </div>
         </div>
